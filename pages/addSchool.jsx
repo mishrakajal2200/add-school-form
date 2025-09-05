@@ -198,7 +198,7 @@ const schema = yup.object({
   city: yup.string().required("City is required"),
   state: yup.string().required("State is required"),
   contact: yup
-    .string()
+    .string()                         
     .matches(/^\d{7,15}$/, "Contact must be 7–15 digits")
     .required("Contact is required"),
   email_id: yup.string().email("Invalid email").required("Email is required"),
