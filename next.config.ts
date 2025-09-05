@@ -1,10 +1,19 @@
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactStrictMode: true,
   images: {
-    unoptimized: true, 
+    unoptimized: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/addSchool",
+        permanent: true, // 308 redirect
+      },
+    ];
   },
 };
 
